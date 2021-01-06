@@ -155,7 +155,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -194,6 +194,111 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://yh0717.github.io/2021/01/06/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%96%B9%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/01/06/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-01-06 09:29:54 / Modified: 09:40:26" itemprop="dateCreated datePublished" datetime="2021-01-06T09:29:54+08:00">2021-01-06</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title:字符串方法</span><br><span class="line">data:<span class="number">2021</span>-<span class="number">1</span>-<span class="number">6</span></span><br><span class="line">tags:</span><br></pre></td></tr></table></figure>
+<p>[TOC]</p>
+<h1 id="字符串常用方法"><a href="#字符串常用方法" class="headerlink" title="字符串常用方法"></a>字符串常用方法</h1><h2 id="length-字符串长度"><a href="#length-字符串长度" class="headerlink" title="length 字符串长度"></a>length 字符串长度</h2><p>这个相对简单，不多赘述</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;hello shadiao&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.length); <span class="comment">// 13</span></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+<p>还有另一种方法，使用 … 扩展运算符</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;hello shadiao&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log([...str].length); <span class="comment">// 13</span></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+<h2 id="split-分割字符串为数组"><a href="#split-分割字符串为数组" class="headerlink" title="split 分割字符串为数组"></a>split 分割字符串为数组</h2><p>split 方法将字符串分割为数组，参数为以XXX分割</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;hello shadiao&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.split(<span class="string">&#x27; &#x27;</span>)); <span class="comment">// [ &#x27;hello&#x27;, &#x27;shadiao&#x27; ]</span></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+<p>还可匹配正则，实现多个分割符分割字符串，一下例子实现以空格和逗号就行分割</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;hello shadiao,my name is world&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.split(<span class="regexp">/[ ,]/</span>)); <span class="comment">// [ &#x27;hello&#x27;, &#x27;shadiao&#x27;, &#x27;my&#x27;, &#x27;name&#x27;, &#x27;is&#x27;, &#x27;world&#x27; ]</span></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+<p>也可使用 … 扩展运算符进行简单的分割</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;hello shadiao&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log([...str]); <span class="comment">// [&#x27;h&#x27;, &#x27;e&#x27;, &#x27;l&#x27;, &#x27;l&#x27;,&#x27;o&#x27;, &#x27; &#x27;, &#x27;s&#x27;, &#x27;h&#x27;,&#x27;a&#x27;, &#x27;d&#x27;, &#x27;i&#x27;, &#x27;a&#x27;,&#x27;o&#x27;]</span></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+<h2 id="repeat-复制字符串"><a href="#repeat-复制字符串" class="headerlink" title="repeat 复制字符串"></a>repeat 复制字符串</h2><p>repeat 方法将字符串进行复制，参数为复制的次数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;hello shadiao! &#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.repeat(<span class="number">2</span>)); <span class="comment">// hello shadiao! hello shadiao!</span></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+<h2 id="反转字符串"><a href="#反转字符串" class="headerlink" title="反转字符串"></a>反转字符串</h2><p>组合扩展操作符 … 、Array.reverse方法和Array.join方法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;hello shadiao&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log([...str].reverse().join(<span class="string">&#x27;&#x27;</span>)); <span class="comment">// oaidahs olleh</span></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+<p>组合split方法、Array.reverse方法和Array.join方法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;hello shadiao&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.split(<span class="string">&#x27;&#x27;</span>).reverse().join(<span class="string">&#x27;&#x27;</span>)); <span class="comment">// oaidahs olleh</span></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+<h2 id="截取字符串"><a href="#截取字符串" class="headerlink" title="截取字符串"></a>截取字符串</h2><h3 id="slice-方法"><a href="#slice-方法" class="headerlink" title="slice()方法"></a>slice()方法</h3><p>slice() 方法截取字符串中特定位置，参数表示从start截取的end，不包含end。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;hello shadiao&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.slice(<span class="number">1</span>, <span class="number">7</span>)); <span class="comment">// ello s</span></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+<h3 id="substr-方法"><a href="#substr-方法" class="headerlink" title="substr()方法"></a>substr()方法</h3><p>substr() 方法可在字符串中抽取从 start 下标开始的指定数目的字符（包含start）。第一个参数表示截取字符串的起始下标，为负数则表示尾部开始算起的位置；第二个参数表示字符串中的字符数，如果省略了该参数，那么返回从开始位置到结尾的字符串。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;hello shadiao&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.substr(<span class="number">1</span>, <span class="number">7</span>)); <span class="comment">// ello sh</span></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+<p>尾部开始截取</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;hello shadiao&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.substr(-<span class="number">1</span>)); <span class="comment">// o</span></span><br><span class="line"><span class="built_in">console</span>.log(str.substr(-<span class="number">9</span>)); <span class="comment">// o shadiao</span></span><br><span class="line"><span class="number">123</span></span><br></pre></td></tr></table></figure>
+<p>substr() 可以替代 substring() 和 slice() 来使用</p>
+<h2 id="替换字符串中的特定序列"><a href="#替换字符串中的特定序列" class="headerlink" title="替换字符串中的特定序列"></a>替换字符串中的特定序列</h2><h3 id="replace"><a href="#replace" class="headerlink" title="replace()"></a>replace()</h3><p>replace() 方法替换匹配的正则<br>只匹配第一个符合正则的序列</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;hello shadiao&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.replace(<span class="regexp">/shadiao/</span>, <span class="string">&#x27;world&#x27;</span>)); <span class="comment">// hello world</span></span><br><span class="line"><span class="number">12</span></span><br><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;hello shadiao, i like shadiao&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.replace(<span class="regexp">/shadiao/</span>, <span class="string">&#x27;world&#x27;</span>)); <span class="comment">// hello world, i like shadiao</span></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+<p>全局匹配正则替换 /xxx/g</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;hello shadiao, i like shadiao&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.replace(<span class="regexp">/shadiao/g</span>, <span class="string">&#x27;world&#x27;</span>)); <span class="comment">// hello world, i like world</span></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+<h3 id="replaceAll"><a href="#replaceAll" class="headerlink" title="replaceAll()"></a>replaceAll()</h3><p>replaceAll() 方法替换所有符合的序列(兼容性问题)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;hello shadiao, i like shadiao&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.replaceAll(<span class="string">&#x27;shadiao&#x27;</span>, <span class="string">&#x27;world&#x27;</span>)); <span class="comment">// hello world, i like world</span></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+<h2 id="填充字符串到指定的长度"><a href="#填充字符串到指定的长度" class="headerlink" title="填充字符串到指定的长度"></a>填充字符串到指定的长度</h2><p>padStart() 以特定字符串在开头补充至指定长度<br>padEnd() 以特定字符串在结尾补充至指定长度</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;001&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.padStart(<span class="number">8</span>, <span class="string">&#x27;0&#x27;</span>)); <span class="comment">// 00000001</span></span><br><span class="line"><span class="built_in">console</span>.log(str.padEnd(<span class="number">8</span>, <span class="string">&#x27;0&#x27;</span>)); <span class="comment">// 00100000</span></span><br><span class="line"><span class="number">123</span></span><br></pre></td></tr></table></figure>
+<h2 id="字符串大小写转换"><a href="#字符串大小写转换" class="headerlink" title="字符串大小写转换"></a>字符串大小写转换</h2><h3 id="toUpperCase-方法字符串转大写"><a href="#toUpperCase-方法字符串转大写" class="headerlink" title="toUpperCase() 方法字符串转大写"></a>toUpperCase() 方法字符串转大写</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;hello shadiao&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.toUpperCase()); <span class="comment">// HELLO SHADIAO</span></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+<h3 id="toLowerCase-方法字符串转小写"><a href="#toLowerCase-方法字符串转小写" class="headerlink" title="toLowerCase() 方法字符串转小写"></a>toLowerCase() 方法字符串转小写</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;HELLO SHADIAO&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.toLowerCase());</span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+<h3 id="首字符转大写"><a href="#首字符转大写" class="headerlink" title="首字符转大写"></a>首字符转大写</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;hello shadiao&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str[<span class="number">0</span>].toUpperCase() + str.substr(<span class="number">1</span>)); <span class="comment">// Hello shadiao</span></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;hello shadiao&#x27;</span>;</span><br><span class="line">arr = [...str];</span><br><span class="line">arr[<span class="number">0</span>] = arr[<span class="number">0</span>].toUpperCase();</span><br><span class="line"><span class="built_in">console</span>.log(arr.join(<span class="string">&#x27;&#x27;</span>)); <span class="comment">// Hello shadiao</span></span><br><span class="line"><span class="number">1234</span></span><br></pre></td></tr></table></figure>
+<h2 id="检查字符串是否包含特定序列"><a href="#检查字符串是否包含特定序列" class="headerlink" title="检查字符串是否包含特定序列"></a>检查字符串是否包含特定序列</h2><p>includes() 方法检查字符串是否包含特定序列</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;hello shadiao&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.includes(<span class="string">&#x27;shadiao&#x27;</span>)); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(str.includes(<span class="string">&#x27;world&#x27;</span>)); <span class="comment">// false</span></span><br><span class="line"><span class="number">123</span></span><br></pre></td></tr></table></figure>
+<h2 id="检查字符串是否以特定序列开头或结尾"><a href="#检查字符串是否以特定序列开头或结尾" class="headerlink" title="检查字符串是否以特定序列开头或结尾"></a>检查字符串是否以特定序列开头或结尾</h2><p>startsWith() 方法检查字符串是否以特定序列开头<br>endsWith() 方法检查字符串是否以特定序列结尾</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;hello shadiao&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.startsWith(<span class="string">&#x27;hello&#x27;</span>)); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(str.startsWith(<span class="string">&#x27;shadiao&#x27;</span>)); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(str.endsWith(<span class="string">&#x27;hello&#x27;</span>)); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(str.endsWith(<span class="string">&#x27;shadiao&#x27;</span>)); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://yh0717.github.io/2021/01/05/javascript/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -219,7 +324,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-01-05 15:24:33 / Modified: 22:08:17" itemprop="dateCreated datePublished" datetime="2021-01-05T15:24:33+08:00">2021-01-05</time>
+      <time title="Created: 2021-01-05 15:24:33 / Modified: 22:16:52" itemprop="dateCreated datePublished" datetime="2021-01-05T15:24:33+08:00">2021-01-05</time>
     </span>
 
   
